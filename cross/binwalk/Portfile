@@ -10,6 +10,9 @@ platforms           darwin
 license             MIT
 supported_archs     noarch
 
+# enable stealth update https://trac.macports.org/wiki/PortfileRecipes#stealth-updates
+dist_subdir        ${name}/${version}_1
+
 python.default_version  27
 
 maintainers         stromnov openmaintainer
