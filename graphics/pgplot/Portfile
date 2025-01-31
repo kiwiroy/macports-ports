@@ -6,7 +6,7 @@ PortGroup           compilers 1.0
 name                pgplot
 conflicts           miriad
 version             5.2.2
-revision            14
+revision            15
 categories          graphics devel
 license             Noncommercial
 platforms           darwin
@@ -57,7 +57,9 @@ patchfiles          patch-makemake.diff \
                     patch-drivers-pndriv.c.diff \
                     patch-proccom.c.diff \
                     implicit.patch \
-                    avoid_multichars.diff
+                    avoid_multichars.diff \
+                    avoid-optimisation-under-clang.diff \
+                    string-copy.diff
 
 # See #37551
 if { [string match *64 ${build_arch}] } {
